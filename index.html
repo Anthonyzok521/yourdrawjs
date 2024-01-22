@@ -4,19 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Draw JS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Pacifico&family=Playpen+Sans:wght@100;400&family=Prompt&family=Tilt+Neon&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="toolbar">
+        <div class="icon menu">
+            <i class="fi fi-sr-apps"></i>
+        </div>        
+        <div class="container-tools">
+            <div class="tools" id="color"><i
+                class=
+                "fi fi-sr-palette"
+                ></i></div>
+            <div class="tools" id="point"><i
+                class=
+                "fi fi-sr-bullet"
+                ></i></div>
+            <div class="tools" id="erase">
+                <i class="fi fi-sr-eraser"></i>
+            </div>
+        </div>
+    </nav>
     <header>
-        <span>Your Draw JS</span>
+        <div class="icon settings" id="settings">
+            <i class="fi fi-sr-settings"></i>
+        </div>
+        <div class="menu-header">
+            <span>Your Draw JS</span>
+            <svg viewBox="-2.93 488.5 604.753 113.677" preserveAspectRatio="none">
+                <path d=" M 0 560 Q 118.192 471.782 310 560 Q 495.161 645.161 600 520 L 600 600 L 0 600 L 0 560 Z "></path>
+              </svg>
+        </div>
     </header>
     <main>
-        <canvas></canvas>
+        <canvas id="main-canvas"></canvas>
     </main>
-    <nav class="toolbar">
-        <div class="tools"></div>
-        <div class="tools"></div>
-        <div class="tools"></div>
-    </nav>
+    <script src="assets/js/draw-api.js"></script>
+    <script src="assets/js/change-theme.js"></script>
 </body>
 </html>
