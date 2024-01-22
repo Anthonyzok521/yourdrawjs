@@ -144,7 +144,7 @@ canvas {
 }
 
 .toolbar:hover .tools i{
-    animation: moveY 1s ease both alternate;
+    animation: moveY 0.3s ease both alternate;
 }
 
 .toolbar:hover {
@@ -196,8 +196,13 @@ canvas {
     transition: 0.1s ease;
 }
 
-.tools:hover i {
-    animation: moveY2 1s ease alternate;
+.tools i{
+    transition: all 0.1s ease;
+}
+
+.tools:active i {
+    font-size: 1.9rem;
+    transition: all 0.1s ease;
 }
 
 @keyframes moveY {
@@ -206,14 +211,5 @@ canvas {
     }
     to{
         transform: translateY(0px);
-    }
-}
-
-@keyframes moveY2 {
-    from{
-        transform: translateY(0px);
-    }
-    to{
-        transform: translateY(10px);
     }
 }
