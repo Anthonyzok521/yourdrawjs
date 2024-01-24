@@ -18,6 +18,7 @@ const resize = (func) => {
     }
 }
 
+//Evento de redimensionar
 window.addEventListener('resize', resize(() => { 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
