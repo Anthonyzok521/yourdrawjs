@@ -26,14 +26,6 @@
     box-sizing: border-box;
 }
 
-main{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 header {
     position: absolute;
     top: -70px;
@@ -41,6 +33,29 @@ header {
     height: 70px;
     transition: .7s ease;
     background-color: var(--header-bgColor);
+    z-index: 2;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+canvas {
+    background-color: var(--canvas-bgColor);
+    box-shadow: inset 0 0 10px 2px var(--canvas-shadow-inset);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
 
 .menu-header {
@@ -73,14 +88,6 @@ header {
     stroke: var(--canvas-bgColor);
   }
 
-canvas {
-    background-color: var(--canvas-bgColor);
-    box-shadow: inset 0 0 10px 2px var(--canvas-shadow-inset);
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-}
-
 .toolbar {
     position: fixed;
     bottom: 0px;
@@ -92,7 +99,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
     transition: 0.3s ease;
 }
 
@@ -136,6 +143,7 @@ canvas {
     font-size: 2rem;
     color: var(--font-color);
     transition: 0.5s ease;
+    z-index: 4;
 }
 
 .toolbar:active > .icon i{
