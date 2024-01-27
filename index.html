@@ -1,9 +1,17 @@
+<!--
+    Your Draw JS
+    ------------
+    *01/21/2024*
+    
+By: Anthony Carrillo
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Draw JS</title>
+    <!--Estilo, fuentes e íconos-->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Pacifico&family=Playpen+Sans:wght@100;400&family=Prompt&family=Tilt+Neon&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--Barra de herramientas oculta-->
     <nav class="toolbar">
         <div class="icon menu">
             <i class="fi fi-sr-apps"></i>
@@ -29,20 +38,43 @@
             </div>
         </div>
     </nav>
+
+    <!--Encabezado con título y un botón de opciones-->
     <header>
         <div class="icon settings" id="settings">
             <i class="fi fi-sr-settings"></i>
         </div>
         <div class="menu-header">
             <span>Your Draw JS</span>
+            <!--Forma ondulada-->
             <svg viewBox="-2.93 488.5 604.753 113.677" preserveAspectRatio="none">
                 <path d=" M 0 560 Q 118.192 471.782 310 560 Q 495.161 645.161 600 520 L 600 600 L 0 600 L 0 560 Z "></path>
               </svg>
         </div>
     </header>
+    
+    <!--Contenido del canvas para dibujar-->
     <main>
         <canvas id="main-canvas"></canvas>
     </main>
+
+    <dialog>
+        <div class="card color">
+            <h3>Select a color</h3>
+            <input type="color" id="input-color">
+            <input type="text" value="#000000" placeholder="#" pattern="#[a-z][0-9]" required>
+        </div>
+        
+        <div class="card size">
+            <h3>Chage the size</h3>
+            <input type="range">
+            <input type="text" id="input-size" value="10" min="0" max="100">
+        </div>
+
+        <input type="button" value="Apply" id="apply">
+    </dialog>
+
+    <!--Scripts JS para manipular el canvas con la api y cambiar el tema de la página-->
     <script src="assets/js/draw-api.js"></script>
     <script src="assets/js/change-theme.js"></script>
 </body>

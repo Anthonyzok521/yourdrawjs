@@ -28,7 +28,7 @@
 
 header {
     position: absolute;
-    top: -70px;
+    top: -100px;
     width: 100%;
     height: 70px;
     transition: .7s ease;
@@ -211,6 +211,10 @@ canvas {
 .tools:active i {
     font-size: 1.9rem;
     transition: all 0.1s ease;
+}
+
+.card {
+    display: none;
 }
 
 @keyframes moveY {
